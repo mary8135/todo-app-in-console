@@ -14,9 +14,13 @@ while (input !== 'quit'){
         myTodoList.push(newTodo);
         console.log(`${newTodo} added to the list.`);
     }else if (input === "delete"){
-        const deleteTodo = prompt (`Enter index number to delete`);
+        const deleteTodo = parseInt(prompt(`Enter index number to delete`));
+        if (!Number.isNaN(deleteTodo)){
         const deleted = myTodoList.splice(deleteTodo, 1);
         console.log (`Ok, ${deleted [0]} deleted.`);
+        } else {
+            console.log('Invalid index.');
+        }
     }
     input = prompt ('what would you like to do?');
 
