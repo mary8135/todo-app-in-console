@@ -13,6 +13,10 @@ while (input !== 'quit'){
         const newTodo = prompt("Enter new task:");
         myTodoList.push(newTodo);
         console.log(`${newTodo} added to the list.`);
+    }else if (input === "delete"){
+        const deleteTodo = prompt (`Enter index number to delete`);
+        const deleted = myTodoList.splice(deleteTodo, 1);
+        console.log (`Ok, ${deleted [0]} deleted.`);
     }
     input = prompt ('what would you like to do?');
 
