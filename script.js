@@ -9,6 +9,10 @@ while (input !== 'quit'){
             console.log`${i}: ${myTodoList[i]}`;
         }
         console.log('**********');
+    }else if (input === 'add'){
+        const newTodo = prompt("Enter new task:");
+        myTodoList.push(newTodo);
+        console.log(`${newTodo} added to the list.`);
     }
     input = prompt ('what would you like to do?');
 
